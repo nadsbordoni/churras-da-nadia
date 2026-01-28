@@ -67,7 +67,7 @@ body {
   position: relative;
   min-height: 100vh;
 
-  background-image: url('assets/header_background.png');
+  background-image: url('assets/images/header_background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -145,13 +145,81 @@ body {
     height: 20px;
 }
 
+.rsvp-texto {
+    position: relative;
+ }  
+  
+.rsvp-texto h2 {
+    font-family: 'Caneta', cursive;
+    font-size: 2.2rem;
+    color: var(--azul-principal);
+    margin-bottom: 16px;
+}
+  
+.rsvp-texto p {
+    font-family: 'Poppins', sans-serif;
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+.rsvp-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.rsvp-decoracao {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-220%, 100%);
+    pointer-events: none;
+}
+  
+.rsvp-decoracao img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+  
+.rsvp-form {
+    width: 100%;
+}
+  
+.rsvp-form iframe {
+    width: 100%;
+    border-radius: 16px;
+    background: transparent;
+}
+
+#playlist {
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist-decoracao {
+    position: absolute;
+    right: -70px;   
+    bottom: -50px;
+    pointer-events: none;
+}
+  
+.playlist-decoracao img {
+    width: 320px;
+    max-width: 40vw;
+    height: auto;
+    opacity: 0.9;
+}
+  
+  
 .carousel {
     display: flex;
     align-items: center;
     gap: 16px;
 }
   
- .carousel-viewport {
+.carousel-viewport {
     overflow: hidden;
     width: 100%;
 }
@@ -164,14 +232,16 @@ body {
   
 .card {
     flex: 0 0 calc(25% - 15px);
-  background: var(--verde-brasil);
-  border-radius: 16px;
-  padding: 16px;
-  text-align: center;
+    background: var(--amarelo-brasil);
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
 }
 
-  .card img {
+.card img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 12px;
     margin-bottom: 12px;
 }
@@ -198,6 +268,12 @@ body {
     opacity: 0.3;
     cursor: default;
 }
+
+.footer {
+    padding: 16px 16px;
+    text-align: center;
+    color: var(--creme-fundo);
+ }
   
 .section.bloco {
     padding: 120px 10%;
@@ -285,52 +361,76 @@ body {
 }
 
 /* =========================
-     RESPONSIVO
-  ========================= */
+   RESPONSIVO
+========================= */
+
+/* Tablets e mobile */
 @media (max-width: 768px) {
+
     body {
-        padding-top: var(--altura-menu);
+      padding-top: var(--altura-menu);
     }
-
+  
     .menu {
-        gap: 16px;
-        padding: 0 16px;
+      gap: 16px;
+      padding: 0 16px;
     }
-
+  
+    /* HERO */
     .hero-title {
-        max-width: 95%;
-        transform: translateY(-40px);
+      max-width: 95%;
+      transform: translateY(-40px);
     }
-
+  
     .slogan {
-        right: 5%;
-        bottom: 10%;
-        font-size: 1.2rem;
-        transform: rotate(-2deg);
+      right: 5%;
+      bottom: 10%;
+      font-size: 1.2rem;
+      transform: rotate(-2deg);
     }
-
+  
+    /* CONTEÚDO */
     .conteudo {
-        flex-direction: column;
-        gap: 40px;
+      flex-direction: column;
+      gap: 40px;
     }
-
+  
     .invertido .conteudo {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .section.bloco {
-        padding: 80px 8%;
+      padding: 80px 8%;
     }
-}
-
-@media (max-width: 1024px) {
+  
+    /* RSVP */
+    .rsvp-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .rsvp-form iframe {
+      height: 480px;
+    }
+    .rsvp-decoracao {
+        margin-top: 32px;
+      }
+    
+    .rsvp-decoracao img {
+        max-width: 300px;
+    }
+  }
+  
+  /* Tablets médios */
+  @media (max-width: 1024px) {
     .card {
-        flex: 0 0 50%; /* 2 cards por página */
+      flex: 0 0 50%; /* 2 cards por página */
     }
-}
-
-@media (max-width: 600px) {
+  }
+  
+  /* Mobile pequeno */
+  @media (max-width: 600px) {
     .card {
-        flex: 0 0 100%; /* 1 card por página */
+      flex: 0 0 100%; /* 1 card por página */
     }
-}
+  }
+  
