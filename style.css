@@ -35,6 +35,10 @@ body {
     padding-top: var(--altura-menu);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .menu {
     position: fixed;
     top: 0;
@@ -184,6 +188,26 @@ body {
 #playlist {
     position: relative;
     overflow: hidden;
+}
+
+.playlist-link {
+    margin-top: 16px;
+    text-align: center;
+}
+  
+.playlist-link a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--preto-texto);
+    background: var(--amarelo-brasil);
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+  
+.playlist-link a:hover {
+    transform: scale(1.05);
 }
 
 .playlist-decoracao {
