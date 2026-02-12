@@ -44,25 +44,19 @@ body {
     top: 0;
     width: 100%;
     height: var(--altura-menu);
-
     background: var(--amarelo-brasil);
     padding: 0 24px;
-
     display: flex;
     align-items: center;
     gap: 24px;
-
     z-index: 1000;
 }
 
 .menu a {
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
-
     text-decoration: none;
     color: var(--preto-texto);
-
     text-transform: uppercase;
     letter-spacing: 0.8px;
 }
@@ -70,12 +64,10 @@ body {
 .hero {
     position: relative;
     min-height: 100vh;
-
     background-image: url('assets/images/header_background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,23 +79,18 @@ body {
     max-width: 90%;
     height: auto;
     z-index: 2;
-
     position: relative;
     top: -35vh;
 }
 
 .slogan {
     position: absolute;
-
     right: 10%;
     bottom: 15%;
-
     font-family: 'Caneta', cursive;
     color: var(--azul-principal);
-
     font-size: 3.0rem;
     letter-spacing: 0.5px;
-
     transform: rotate(-3deg);
     z-index: 3;
 }
@@ -194,7 +181,6 @@ body {
     margin-top: 16px;
     text-align: center;
 }
-
 
 .playlist-link a {
     font-weight: 600;
@@ -391,6 +377,12 @@ body {
     .menu {
         flex-wrap: wrap;
         height: var(--altura-menu);
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.4rem;
+        cursor: pointer;
     }
 
     .menu.active {
